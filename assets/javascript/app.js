@@ -1,6 +1,6 @@
 // giphy app
 
-  // initial array of movies
+  // initial array of topics
   var searchTerms = ["Shiba Inu", "Giraffe", "Wolf", "Wolverine", "Hamster", "Ferret", "Siberian Husky", "Armadillo", "Cat"];
 
   function renderButtons() {    // renders the search buttons
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     renderButtons();
 
-    $(".search-button").on("click", function() {    // listens for button click and takes in term to search for gifs
+    $("#link-populate").on("click", ".search-button", function() {    // listens for button click and takes in term to search for gifs
         var sTerm = $(this).attr("data-name");
         gifSearcher(sTerm);
     });
@@ -61,7 +61,7 @@ $(document).ready(function(){
         renderButtons();
     });
 
-    $(".gif").on("click", function() {
+    $("#gif-populate").on("click", ".gif", function() {     // makes gifs pause or play on click
         console.log("click click")
         var state = $(this).attr("data-state");
         if (state === "still") {

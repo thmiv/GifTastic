@@ -1,0 +1,11 @@
+.search-button {
+    margin: 5px;
+    background: lightblue;
+    border-style: none;
+}
+#add-term {
+    background: maroon;
+    color: beige;
+    font-weight: bold;
+    border-style: none;
+}

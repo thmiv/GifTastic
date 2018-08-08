@@ -1,7 +1,7 @@
 // giphy app
 
   // initial array of topics
-  var searchTerms = ["Shiba Inu", "Giraffe", "Wolf", "Wolverine", "Hamster", "Ferret", "Siberian Husky", "Armadillo", "Cat"];
+  var searchTerms = ["Jupiter", "Rocket", "Nebula", "Quasar", "Satellite", "NASA", "Space Shuttle", "Cosmonaut", "Space Cat"];
 
   function renderButtons() {    // renders the search buttons
     $("#link-populate").empty();
@@ -26,11 +26,12 @@
         var results = response.data;
         for (var i = 0; i < results.length; i++) {
             if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
-                var gifDiv = $("<div class='item'>");
+                var gifDiv = $("<div class='col-md-6'>");
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating);
+                var title = results[i].title;
+                var p = $("<p>").text(title + " // Rating: " + rating);
                 var searchImage = $("<img>");
-                searchImage.addClass("gif");
+                searchImage.addClass("img-responsive gif");
                 searchImage.attr("src", results[i].images.fixed_height_still.url);
                 searchImage.attr("data-still", results[i].images.fixed_height_still.url);
                 searchImage.attr("data-animate", results[i].images.fixed_height.url);

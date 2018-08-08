@@ -1,17 +1,39 @@
 body {
-    background: #8a90a4;
+    background: url("../images/darkness.png");
+    color: #affadd;
+    font-family: 'Space Mono', monospace;
 }
 #link-populate {
     margin: 20px;
 }
+#search-box {
+    margin: 0 0 20px 25px;
+}
 .search-button {
     margin: 5px;
-    background: lightblue;
+    background: rgb(69, 170, 86);
+    color: #000000;
+    font-weight: bold;
     border-style: none;
 }
 #add-term {
-    background: maroon;
-    color: beige;
+    background: #4027b1;
+    color: #eeeeee;
     font-weight: bold;
     border-style: none;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+}
+#gif-populate {
+    margin-left: 10px;
+}
+#instructions {
+    margin: 0 0 20px 25px;
+    color: #e6dede;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+img {
+    margin-bottom: 15px;
+    margin-top: -10px;
 }
